@@ -26,8 +26,8 @@ var NAVTREE =
 [
   [ "ME 405 Lab 1", "index.html", [
     [ "Introduction", "index.html#sec_intro", null ],
-    [ "We wrote an encoder reader class encoder.py that allows", "index.html#sec_enc", null ],
-    [ "We wrote a motor driver class motor.py that allows for", "index.html#sec_mot", null ],
+    [ "Encoder Reader Class", "index.html#sec_enc", null ],
+    [ "Motor Driver Class", "index.html#sec_mot", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

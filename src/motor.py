@@ -25,13 +25,11 @@ class MotorDriver:
         @param timer    The timer object to use to control PWM.
         '''
         # print ('Creating a motor driver')
-        self.en_pin = pyb.Pin(en_pin, pyb.Pin.OUT_PP)
-        self.in1pin = pyb.Pin(in1pin)
-        self.in2pin = pyb.Pin(in2pin)
-        self.timer = timer
+        self._en_pin = pyb.Pin(en_pin, pyb.Pin.OUT_PP)
+        self._timer = timer
         
-        self.ch1 = self.timer.channel(1, pyb.Timer.PWM, pin=in1pin)
-        self.ch2 = self.timer.channel(2, pyb.Timer.PWM, pin=in2pin)
+        self._ch1 = self._timer.channel(1, pyb.Timer.PWM, pin=in1pin)
+        self._ch2 = self._timer.channel(2, pyb.Timer.PWM, pin=in2pin)
 
     def set_duty_cycle (self, level):
         '''!
@@ -54,10 +52,10 @@ class MotorDriver:
             ch2_level = 0
         else:
             raise ValueError("level must be between -100 and 100")
-        self.en_pin.high()
+        self._en_pin.high()
         print("ch1: ", ch1_level, "ch2: ", ch2_level)
-        self.ch1.pulse_width_percent(ch1_level)
-        self.ch2.pulse_width_percent(ch2_level)
+        self._ch1.pulse_width_percent(ch1_level)
+        self._ch2.pulse_width_percent(ch2_level)
 
 
 if __name__ == "__main__":
