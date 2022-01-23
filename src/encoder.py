@@ -1,6 +1,6 @@
 """!@file       encoder.py
-    @brief      A driver for reading from Quadrature Encoders
-    @details    Includes the class Encoder.
+    A driver for reading from Quadrature Encoders. Includes the class Encoder.
+    
     @author     Tori Bornino
     @author     Jackson McLaughlin
     @author     Zach Stednitz
@@ -14,21 +14,18 @@ import pyb
 _ENC_PERIOD = 2 ** 16 - 1 # Ticks overflow period for the encoder
 
 class Encoder:
-    """!@brief      Interface with quadrature encoders
-        @details    This class is a driver for quadrature encoders.
-                    It uses the timer functions of the nucleo board.
-                    It provides functions for getting position
-                    while being safe from overflow or underflow
-                    errors, and allows for the zeroing of position
-                    of the encoder.
+    """!Interface with quadrature encoders. This class is a driver for
+        quadrature encoders. It uses the timer functions of the nucleo board.
+        It provides functions for getting position while being safe from
+        overflow or underflow errors, and allows for the zeroing of position
+        of the encoder.
     """
     
     def __init__(self, pin1, pin2, timerID, timerChannel1=1, timerChannel2=2):
-        """!@brief      Constructs an encoder object
-            @details    The Encoder object stores position and delta values and
-                        provides methods to get position or delta and to set
-                        position. The hardware timer is set up in this
-                        constructor.
+        """!Constructs an encoder object. The Encoder object stores position
+            and delta values and provides methods to get position or delta and
+            to set position. The hardware timer is set up in this constructor.
+            
             @param      pin1            First encoder pin
             @param      pin2            Second encoder pin
             @param      timerID         Timer ID number of timer to use
@@ -53,9 +50,9 @@ class Encoder:
         self.currentTick = 0
         
     def read(self):
-        ''' @brief      Updates and returns encoder position
-            @details    Updates variables which store position values. 
-                        Compensates for overflow and underflow.
+        '''!Updates and returns encoder position. Updates variables which store
+            position values. Compensates for overflow and underflow.
+            
             @return     The position of the encoder shaft in ticks                    
         '''
         # Calculate the change in position in ticks using the last
@@ -76,8 +73,8 @@ class Encoder:
         return self.position
     
     def zero(self):
-        ''' @brief      Sets encoder position to zero
-            @details    Sets the encoder position in ticks to zero.
+        '''!Sets encoder position to zero. Sets the encoder position in ticks
+            to zero.
         '''
         self.position = 0
         
