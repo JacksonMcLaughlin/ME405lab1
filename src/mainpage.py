@@ -11,11 +11,13 @@
                         Source code is available at:
                         https://github.com/JacksonMcLaughlin/ME405lab1
 
-    @section sec_enc    We wrote an encoder reader class encoder.py that allows
+    @section sec_enc    Encoder Reader Class
+                        We wrote an encoder reader class encoder.py that allows
                         for a quadrature encoder to read and zero the position
                         of a motor.
 
-    @section sec_mot    We wrote a motor driver class motor.py that allows for
+    @section sec_mot    Motor Driver Class
+                        We wrote a motor driver class motor.py that allows for
                         the user to set the duty cycle on a motor.
 
     @author             Tori Bornino
