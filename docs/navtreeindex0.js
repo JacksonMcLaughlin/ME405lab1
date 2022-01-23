@@ -11,13 +11,13 @@ var NAVTREEINDEX0 =
 "classmotor_1_1_motor_driver.html":[0,0,1,0],
 "classmotor_1_1_motor_driver.html#a51b4721406aa66e0807413199b8b700f":[0,0,1,0,1],
 "classmotor_1_1_motor_driver.html#a87ba601be3026514b178d7fee584aed0":[0,0,1,0,0],
-"dir_1768037b5383c9947d6c4b26249e89bd.html":[1,0,0,0],
-"dir_5ad6b57c6030f05e408be6742cdf0ab8.html":[1,0,0],
-"encoder_8py.html":[1,0,0,0,0],
+"dir_68267d1309a1af8e8297ef4c3efbcdba.html":[1,0,0],
+"encoder_8py.html":[1,0,0,0],
 "files.html":[1,0],
 "functions.html":[0,2,0],
 "functions_func.html":[0,2,1],
 "functions_vars.html":[0,2,2],
 "index.html":[],
+"motor_8py.html":[1,0,0,1],
 "pages.html":[]
 };
