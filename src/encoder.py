@@ -1,11 +1,11 @@
-"""!@file       encoder.py
+'''!@file       encoder.py
     A driver for reading from Quadrature Encoders. Includes the class Encoder.
     
     @author     Tori Bornino
     @author     Jackson McLaughlin
     @author     Zach Stednitz
     @date       January 13, 2022
-"""
+'''
 
 import pyb
 
@@ -14,15 +14,15 @@ import pyb
 _ENC_PERIOD = 2 ** 16 - 1 # Ticks overflow period for the encoder
 
 class Encoder:
-    """!Interface with quadrature encoders. This class is a driver for
+    '''!Interface with quadrature encoders. This class is a driver for
         quadrature encoders. It uses the timer functions of the nucleo board.
         It provides functions for getting position while being safe from
         overflow or underflow errors, and allows for the zeroing of position
         of the encoder.
-    """
+    '''
     
     def __init__(self, pin1, pin2, timerID, timerChannel1=1, timerChannel2=2):
-        """!Constructs an encoder object. The Encoder object stores position
+        '''!Constructs an encoder object. The Encoder object stores position
             and delta values and provides methods to get position or delta and
             to set position. The hardware timer is set up in this constructor.
             
@@ -31,7 +31,7 @@ class Encoder:
             @param      timerID         Timer ID number of timer to use
             @param      timerChannel1   Channel 1 id number. Default 1
             @param      timerChannel2   Channel 2 id number. Default 2
-        """
+        '''
         self._timer = pyb.Timer(timerID,period=(_ENC_PERIOD),prescaler=0)
         # Channels are never called in code, but they enable the timer counter 
         self._channel_1 = self._timer.channel(timerChannel1,

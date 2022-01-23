@@ -1,3 +1,11 @@
+'''!@file motor.py
+    A driver for controlling a motor driver board using PWM.
+    
+    @author     Tori Bornino
+    @author     Jackson McLaughlin
+    @author     Zach Stednitz
+    @date       January 13, 2022
+'''
 import pyb
 class MotorDriver:
     '''! 
@@ -8,9 +16,15 @@ class MotorDriver:
         '''! 
         Creates a motor driver by initializing GPIO
         pins and turning the motor off for safety. 
-        @param en_pin (There will be several of these)
+        @param en_pin   The pin on the Nucleo connected to the enable pin on the
+                        motor driver.
+        @param in1pin   The pin on the nucleo connected to the first input pin
+                        on the motor driver.
+        @param in2pin   The pin on the nucleo connected to the second input pin
+                        on the motor driver.
+        @param timer    The timer object to use to control PWM.
         '''
-        print ('Creating a motor driver')
+        # print ('Creating a motor driver')
         self.en_pin = pyb.Pin(en_pin, pyb.Pin.OUT_PP)
         self.in1pin = pyb.Pin(in1pin)
         self.in2pin = pyb.Pin(in2pin)
