@@ -61,9 +61,9 @@ class MotorDriver:
 
 
 if __name__ == "__main__":
-    ena_pin = pyb.Pin.board.PA10
-    in1a_pin = pyb.Pin.board.PB4
-    in2a_pin = pyb.Pin.board.PB5
-    tim3 = pyb.Timer(3, freq=20000)
-    moe = MotorDriver(ena_pin, in1a_pin, in2a_pin, tim3)
-    moe.set_duty_cycle(70)
+    _ena_pin = pyb.Pin.board.PA10
+    _in1a_pin = pyb.Pin.board.PB4
+    _in2a_pin = pyb.Pin.board.PB5
+    _tim3 = pyb.Timer(3, freq=20000)
+    _moe = MotorDriver(_ena_pin, _in1a_pin, _in2a_pin, _tim3)
+    _moe.set_duty_cycle(70)
