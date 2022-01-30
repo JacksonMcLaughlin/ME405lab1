@@ -43,7 +43,7 @@ class MotorDriver:
         print ('Setting duty cycle to ' + str (level))
         if level < 0 and level >= -100:
             ch1_level = 0
-            ch2_level = level
+            ch2_level = -level
         elif level == 0:
             ch1_level = 0
             ch2_level = 0
